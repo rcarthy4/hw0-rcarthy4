@@ -34,7 +34,7 @@ in the example, using is required to instantiate the type Image class and then w
 
 ###  What does it mean to be "const correct" when writing ITK classes? (HINT: http://en.wikipedia.org/wiki/Const-correctness)
 ```
-From my understanding, const correct means that there cannot be a mismatch in the type. The example they show in the wiki page is the fact that the variable requires a variable integer but they are trying to pass in a constant integer which will not work since the program does not do polymorphism. 
+From my understanding, const correct means that there cannot be a mismatch in the type. The example they show in the wiki page is the fact that the variable requires a variable integer but they are trying to pass in a constant integer which will not work since the program does not do polymorphism. Similarly, in classes (user-defined types) with member data, const tag keeps the data from being changed or manipulated. Const methods can be called by eith const or non-const objects whereas non-const methods can be called by non const objects thus keeping const correctness. This is a useful tag especially for data that shouldn't be changed or altered and can keep a user from accidently deleting or modifying data. 
 (http://itk-insight-users.2283740.n2.nabble.com/itk-SmartPointer-problem-making-code-const-correct-td5109890.html)
 (https://en.wikipedia.org/wiki/Const_(computer_programming))
 ```
